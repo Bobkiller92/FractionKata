@@ -14,5 +14,9 @@
             _denominateur = denominateur;
         }
 
+        public Fraction Add(Fraction f2)
+        {
+            return new Fraction(0, 1);
+        }
     }
 }

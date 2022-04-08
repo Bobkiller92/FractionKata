@@ -1,3 +1,4 @@
+using FractionKata.Prod;
 using NUnit.Framework;
 
 namespace FractionKata.Test
@@ -5,9 +6,14 @@ namespace FractionKata.Test
     public class FractionTest
     {        
         [Test]
-        public void Test1()
+        public void AdditionShouldReturnZero()
         {
-            Assert.Pass();
+            Fraction f1 = new Fraction(0, 1);
+            Fraction f2 = new Fraction(0, 1);
+
+            Fraction result = f1.Add(f2);
+
+            Assert.AreEqual(0, result.Numerateur);
         }
     }
 }
