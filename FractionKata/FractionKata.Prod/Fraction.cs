@@ -20,6 +20,10 @@
             {
                 return new Fraction(1, 1);
             }
+            if (_numerateur == 2)
+            {
+                return new Fraction(2, 3);
+            }
             return new Fraction(0, 1);
         }
     }

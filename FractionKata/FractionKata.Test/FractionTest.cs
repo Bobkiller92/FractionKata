@@ -27,5 +27,17 @@ namespace FractionKata.Test
             Assert.AreEqual(1, result.Numerateur);
             Assert.AreEqual(1, result.Denominateur);
         }
+
+        [Test]
+        public void SameDenominateurAdditionShouldReturnTwoForNumerateur()
+        {
+            Fraction f1 = new Fraction(2, 3);
+            Fraction f2 = new Fraction(0, 3);
+
+            Fraction result = f1.Add(f2);
+
+            Assert.AreEqual(2, result.Numerateur);
+            Assert.AreEqual(3, result.Denominateur);
+        }
     }
 }
