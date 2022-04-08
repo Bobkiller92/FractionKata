@@ -87,5 +87,29 @@ namespace FractionKata.Test
             Assert.AreEqual(8, result.Numerateur);
             Assert.AreEqual(15, result.Denominateur);
         }
+
+        [Test]
+        public void DifferentDenominateurAdditionShouldReturn5_12()
+        {
+            Fraction f1 = new Fraction(1, 4);
+            Fraction f2 = new Fraction(1, 6);
+
+            Fraction result = f1.Add(f2);
+
+            Assert.AreEqual(5, result.Numerateur);
+            Assert.AreEqual(12, result.Denominateur);
+        }
+
+        [Test]
+        public void DifferentDenominateurAdditionShouldReturn7_18()
+        {
+            Fraction f1 = new Fraction(1, 6);
+            Fraction f2 = new Fraction(2, 9);
+
+            Fraction result = f1.Add(f2);
+
+            Assert.AreEqual(7, result.Numerateur);
+            Assert.AreEqual(18, result.Denominateur);
+        }
     }
 }
