@@ -25,6 +25,7 @@ namespace FractionKata.Test
             Fraction result = f1.Add(f2);
 
             Assert.AreEqual(1, result.Numerateur);
+            Assert.AreEqual(1, result.Denominateur);
         }
     }
 }
