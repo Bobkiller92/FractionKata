@@ -15,20 +15,26 @@
         }
 
         public Fraction Add(Fraction f2)
-        {            
-            if (_denominateur == 4)
-            {
-                return new Fraction(5, 12);
-            }
-            if (_denominateur == 6)
-            {
-                return new Fraction(7, 18);
-            }
+        {
+            int numerateur, denominateur;
+
             if (_denominateur != f2.Denominateur)
             {
-                return new Fraction(_numerateur * f2.Denominateur + _denominateur * f2.Numerateur, _denominateur * f2.Denominateur);
+                numerateur = _numerateur * f2.Denominateur + _denominateur * f2.Numerateur;
+                denominateur = _denominateur * f2.Denominateur;                
             }
-            return new Fraction(_numerateur + f2.Numerateur, _denominateur);
+            else
+            {
+                numerateur = _numerateur + f2.Numerateur;
+                denominateur = _denominateur;
+            }
+            int pgcd = GetPgcd(numerateur, denominateur);
+            return new Fraction(numerateur / pgcd, denominateur / pgcd);
+        }
+
+        private int GetPgcd(int a, int b)
+        {
+            return b == 0 ? a : GetPgcd(b, a % b);
         }
     }
 }
