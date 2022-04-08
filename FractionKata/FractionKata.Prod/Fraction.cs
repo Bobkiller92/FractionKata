@@ -15,16 +15,8 @@
         }
 
         public Fraction Add(Fraction f2)
-        {
-            if (f2.Numerateur == 1)
-            {
-                return new Fraction(3, _denominateur);
-            }
-            if (f2.Numerateur == 3)
-            {
-                return new Fraction(4, _denominateur);
-            }
-            return new Fraction(_numerateur, _denominateur);
+        {            
+            return new Fraction(_numerateur + f2.Numerateur, _denominateur);
         }
     }
 }
